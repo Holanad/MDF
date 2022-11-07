@@ -1,0 +1,1392 @@
+*, ::after, ::before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: none;
+}
+
+body, html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+  font-size: 15px;
+  min-width: 320px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  padding: 0;
+  margin: 0;
+}
+
+ul, li {
+  display: block;
+  padding: 0px;
+  margin: 0px;
+}
+
+textarea {
+  resize: none;
+}
+
+p {
+  font-size: 16px;
+}
+
+img {
+  border-style: none;
+}
+
+button {
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: none;
+}
+
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -webkit-appearance: none;
+          appearance: none;
+  -moz-appearance: textfield;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+  display: none;
+}
+
+input[type=text]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type=text]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoratio {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+p, nav {
+  margin: 0;
+  padding: 0;
+}
+
+a, a:hover, a:active, a:focus,
+button, input, button:hover, button:active, button:focus,
+input:focus, input:active {
+  outline: none;
+  /*  -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease;*/
+}
+
+input {
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input[type=text] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.f-jcsb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.f-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.f-jcsb-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.f-center-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.f-dc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.f-dc-jcsb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.f-dc-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.f-dc-center-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  pointer-events: none;
+}
+
+.img-contain {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
+  pointer-events: none;
+}
+
+.btn {
+  font-family: 'Gilroy Semibold';
+  font-size: 14px;
+  line-height: 150%;
+  padding: 14.5px 23px;
+  border: 1px solid #056BF1;
+  border-radius: 4px;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  display: inline-block;
+}
+
+.btn-transp {
+  color: #4B4B4B;
+}
+
+.btn-transp:hover {
+  background: #056BF1;
+  color: #FFFFFF;
+}
+
+.btn-full {
+  background: #056BF1;
+  color: #FFFFFF;
+}
+
+.btn-full:hover {
+  color: #171717;
+  background: transparent;
+}
+
+.link {
+  font-size: 14px;
+  line-height: 16px;
+  color: #056BF1;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.link:hover {
+  text-shadow: 0 0 20px #056bf1;
+}
+
+.title {
+  font-weight: normal;
+  font-size: 45px;
+  line-height: 56px;
+  text-transform: uppercase;
+  color: #252525;
+  font-family: 'TT Interphases Pro Mono Regular';
+}
+
+.page span {
+  margin-right: 16px;
+}
+
+.page__btn {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  font-size: 28px;
+  line-height: 35px;
+}
+
+.page__btn:hover {
+  font-family: 'TT Interphases Pro Mono Bold';
+}
+
+.page__btn.active {
+  font-family: 'TT Interphases Pro Mono Bold';
+}
+
+.page__btn:not(:last-child) {
+  margin-right: 16px;
+}
+
+body {
+  background: #F1F0ED;
+}
+
+a, span, p, input, button, select, option, textarea, label {
+  font-family: 'TT Interphases Pro Mono Regular';
+  font-size: 16px;
+  line-height: 20px;
+  color: #252525;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  font-size: 16px;
+  line-height: 130%;
+  color: rgba(38, 38, 38, 0.4);
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  font-size: 16px;
+  line-height: 130%;
+  color: rgba(38, 38, 38, 0.4);
+}
+
+input::-ms-input-placeholder, textarea::-ms-input-placeholder {
+  font-size: 16px;
+  line-height: 130%;
+  color: rgba(38, 38, 38, 0.4);
+}
+
+input::placeholder, textarea::placeholder {
+  font-size: 16px;
+  line-height: 130%;
+  color: rgba(38, 38, 38, 0.4);
+}
+
+label.error {
+  color: #C62828;
+}
+
+input.error {
+  border: 1px solid #C62828 !important;
+}
+
+.breadcrumb-wrapper {
+  padding-bottom: 70px;
+}
+
+.breadcrumb-main, .breadcrumb-slash {
+  color: #9CACC2;
+  font-size: 14px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.breadcrumb-main:hover, .breadcrumb-slash:hover {
+  color: #056BF1;
+}
+
+.breadcrumb-next {
+  font-size: 14px;
+  color: #056BF1;
+  position: relative;
+  padding-left: 15px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.breadcrumb-next::before {
+  width: 5px;
+  height: 1px;
+  content: '';
+  position: absolute;
+  left: 2px;
+  background: #9CACC2;
+  top: 8px;
+}
+
+.container {
+  width: 1340px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.header-wrapper {
+  padding: 43px 0 36px 0;
+}
+
+.header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header nav ul li {
+  position: relative;
+}
+
+.header nav ul li ul {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 270px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 24.5px 0 11.5px 0;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.header nav ul li ul a {
+  text-decoration: none;
+}
+
+.header nav ul li ul li:not(:last-child) a {
+  padding: 3.5px 0;
+}
+
+.header nav ul li a {
+  text-decoration: underline;
+  display: inline-block;
+  text-transform: lowercase;
+  font-size: 18px;
+}
+
+.header nav ul li a:hover {
+  font-family: 'TT Interphases Pro Mono Italic';
+}
+
+.header nav ul li a.active {
+  font-family: 'TT Interphases Pro Mono Bold';
+}
+
+.header nav ul li:hover ul {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.header-info {
+  margin-top: 28px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.header-logo {
+  width: 216px;
+  display: inline-block;
+  height: 140px;
+}
+
+.header-logo h1 {
+  text-transform: uppercase;
+  font-size: 60px;
+  line-height: 70px;
+}
+
+.header-contact {
+  text-align: right;
+}
+
+.slogan {
+  background: #688054;
+}
+
+.slogan-wrapper {
+  padding: 26px 0;
+}
+
+.slogan-wrapper p {
+  font-size: 28px;
+  line-height: 35px;
+  text-transform: uppercase;
+  color: #F1F0ED;
+  text-align: center;
+}
+
+.service-wrapper {
+  padding: 50px 0 63px 0;
+}
+
+.service__title {
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.service-item__image {
+  width: 169px;
+  height: 345px;
+}
+
+.service-item__name {
+  margin-top: 30px;
+  width: 154px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.service-item__link {
+  text-decoration: underline;
+}
+
+.service-item:hover .service-item__name {
+  font-family: 'TT Interphases Pro Mono Italic';
+}
+
+.service.purple .service-item__name {
+  color: #fff;
+}
+
+.why {
+  position: relative;
+}
+
+.why__title {
+  margin-bottom: 50px;
+}
+
+.why-info {
+  width: 580px;
+  padding: 50px 0 78px 0;
+}
+
+.why-image {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+}
+
+.project {
+  background: #8E7FB9;
+}
+
+.project-wrapper {
+  padding: 57px 0;
+}
+
+.project__title {
+  margin-bottom: 57px;
+  color: #fff;
+}
+
+.project-list {
+  cursor: move;
+  /* fallback if grab cursor is unsupported */
+  cursor: grab;
+  cursor: -webkit-grab;
+}
+
+.project-item {
+  width: 478px;
+}
+
+.project-item__image {
+  height: 406px;
+  overflow: hidden;
+}
+
+.project-item__image img {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.project-item__name {
+  color: #F1F0ED;
+  text-align: center;
+  margin-top: 23px;
+  text-decoration: underline;
+}
+
+.project-item__link {
+  text-decoration: none;
+}
+
+.project-item:hover .project-item__image img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.project-item:hover .project-item__name {
+  font-family: 'TT Interphases Pro Mono Italic';
+}
+
+.project-slider {
+  position: relative;
+}
+
+.project-slider-panel {
+  position: absolute;
+  top: calc(50% - 50px);
+  left: 0;
+  z-index: 1;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+}
+
+.project-slider-panel__arrow {
+  font-size: 75px;
+  line-height: 94px;
+  text-transform: uppercase;
+  color: #F2F0EA;
+  position: absolute;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.project-slider-panel__arrow.next {
+  right: 0;
+}
+
+.project-slider-panel__arrow.prev {
+  left: 0;
+}
+
+.project-slider-panel__arrow.swiper-button-disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.footer-wrapper {
+  padding: 34px 0 40px 0;
+}
+
+.footer nav {
+  height: 143px;
+  margin-right: auto;
+  margin-left: 54px;
+}
+
+.footer nav > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  /* align-items: center;
+            justify-content: space-between;*/
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.footer nav > ul > li {
+  width: 130px;
+}
+
+.footer nav > ul li {
+  position: relative;
+  margin-bottom: 9px;
+}
+
+.footer nav > ul li:nth-child(5) {
+  margin-bottom: 0;
+  margin-right: 95px;
+}
+
+.footer nav > ul li ul {
+  left: 100px;
+  top: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.footer nav > ul li li {
+  width: 273px;
+}
+
+.footer nav > ul li a {
+  display: inline-block;
+  text-transform: lowercase;
+  font-size: 18px;
+}
+
+.footer nav > ul li a:hover {
+  font-family: 'TT Interphases Pro Mono Italic';
+}
+
+.footer nav > ul li a.active {
+  font-family: 'TT Interphases Pro Mono Bold';
+}
+
+.footer nav > ul li:hover ul {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.footer-logo {
+  width: 216px;
+  display: inline-block;
+  height: 140px;
+}
+
+.footer-logo p {
+  text-transform: uppercase;
+  font-size: 60px;
+  line-height: 70px;
+}
+
+.footer-main {
+  width: 274px;
+}
+
+.footer__copy {
+  margin-top: auto;
+  font-size: 12px;
+}
+
+.footer__phone {
+  font-size: 28px;
+  line-height: 35px;
+}
+
+.footer-contact {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 250px;
+}
+
+.footer-social {
+  margin: 7px 0 12px 0;
+}
+
+.footer-social__link:not(:last-child) {
+  margin-right: 45px;
+}
+
+.footer-info__item {
+  text-align: right;
+  display: block;
+}
+
+.service-single-block {
+  padding: 49px 0 41px 0;
+}
+
+.service-single-block:nth-child(odd) .service-single-info__title {
+  text-transform: uppercase;
+}
+
+.service-single-block:nth-child(odd) .service-single-info__title,
+.service-single-block:nth-child(odd) .service-single-info__descr,
+.service-single-block:nth-child(odd) .service-single-info__link {
+  color: #fff;
+}
+
+.service-single-image {
+  width: 482px;
+  margin-left: 116px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.service-single-image__item {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.service-single-image__item:nth-child(1) {
+  width: 79px;
+  height: 345px;
+}
+
+.service-single-image__item:nth-child(2) {
+  width: 95px;
+  height: 180px;
+}
+
+.service-single-image__item:nth-child(3) {
+  width: 45px;
+  height: 193px;
+}
+
+.service-single-image__item:nth-child(4) {
+  width: 92px;
+  height: 177px;
+}
+
+.service-single-info {
+  width: 530px;
+  margin-right: 110px;
+}
+
+.service-single-info__title {
+  margin-bottom: 80px;
+}
+
+.service-single-info__link {
+  margin-top: 65px;
+  display: inline-block;
+  text-decoration: underline;
+  font-family: 'TT Interphases Pro Mono Italic';
+}
+
+.about {
+  background: #688054;
+  position: relative;
+}
+
+.about__title {
+  margin-bottom: 50px;
+}
+
+.about__title, .about__descr {
+  color: #fff;
+}
+
+.about-info {
+  padding: 48px 0;
+  width: 420px;
+}
+
+.about-image {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 55%;
+  height: 100%;
+}
+
+.advantage-wrapper {
+  padding: 30px 0 50px 0;
+}
+
+.advantage__title {
+  margin-bottom: 30px;
+}
+
+.advantage-list {
+  height: 180px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.advantage-item {
+  width: 420px;
+  margin-right: 21px;
+  margin-bottom: 24px;
+}
+
+.advantage-image {
+  height: 458px;
+  width: 100%;
+}
+
+.contact-wrapper {
+  padding: 121px 0 218px 0;
+}
+
+.contact__title {
+  margin-bottom: 30px;
+}
+
+.contact-block__name {
+  font-size: 45px;
+  line-height: 56px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.contact-block-inner:nth-child(1) {
+  width: 310px;
+  /*  margin-right: 20px;*/
+}
+
+.contact-block-inner:nth-child(2) {
+  width: 310px;
+  /* margin-right: 20px;*/
+  margin-left: auto;
+  margin-right: 16px;
+}
+
+.contact-block-inner:nth-child(3) {
+  /* margin-left: auto;*/
+  margin-right: 130px;
+}
+
+.contact-social__item:not(:last-child) {
+  margin-right: 45px;
+}
+
+.contact-social__item p {
+  margin-right: 40px;
+}
+
+.contact-single .contact-wrapper {
+  padding: 30px 0 59px 0;
+}
+
+.contact-single .contact-block-inner:nth-child(2) {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.our-project-wrapper {
+  padding: 20px 0;
+}
+
+.our-project-list {
+  gap: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.our-project-item {
+  width: 420px;
+  height: 350px;
+  position: relative;
+}
+
+.our-project-item-link {
+  width: 100%;
+  height: 100%;
+}
+
+.our-project-item-link::before {
+  position: absolute;
+  content: '';
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(104, 128, 84, 0.8);
+}
+
+.our-project-item-link:hover::before {
+  opacity: 1;
+}
+
+.our-project-item-link:hover .our-project-item__name {
+  opacity: 1;
+}
+
+.our-project-item__name {
+  font-family: 'TT Interphases Pro Mono Regular';
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 35px;
+  text-transform: uppercase;
+  color: #F1F0ED;
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  width: calc(100% - 40px);
+}
+
+.our-project-current {
+  margin-bottom: 50px;
+}
+
+.our-project-current-image {
+  width: 639px;
+  height: 362px;
+}
+
+.our-project-current__title {
+  margin-bottom: 50px;
+}
+
+.our-project-current-info {
+  width: 642px;
+}
+
+.our-project-current-block {
+  margin-top: auto;
+}
+
+.our-project-current__link {
+  font-size: 18px;
+  margin-top: 56px;
+  line-height: 22px;
+  font-family: 'TT Interphases Pro Mono Italic';
+  text-decoration: underline;
+}
+
+.blog-list {
+  width: 860px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+}
+
+.blog-item:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+.blog-item .our-project-current {
+  margin-bottom: 0;
+}
+
+.blog-item .our-project-current-image {
+  width: 420px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.blog-item .our-project-current-image img {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.blog-item .our-project-current-info {
+  width: 420px;
+}
+
+.blog-item:hover .our-project-current-image img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.recall-wrapper {
+  padding: 20px 0 55px 0;
+  width: 860px;
+  margin: 0 auto;
+}
+
+.recall-block {
+  margin-bottom: 60px;
+}
+
+.recall-info {
+  width: 420px;
+}
+
+.recall-info__name {
+  font-size: 28px;
+  line-height: 35px;
+  text-transform: uppercase;
+}
+
+.recall-info__org {
+  font-family: 'TT Interphases Pro Mono Italic';
+  margin: 5px 0 3px 0;
+}
+
+.recall-info__date {
+  font-family: 'TT Interphases Pro Mono Italic';
+  margin-bottom: 20px;
+}
+
+.recall-info__text {
+  margin-top: auto;
+}
+
+.recall-image {
+  width: 420px;
+  height: 300px;
+}
+
+.price__title {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.price-wrapper {
+  width: 860px;
+  margin: 0 auto;
+  padding: 20px 0 60px 0;
+}
+
+.price-table figure {
+  margin: 0;
+}
+
+.price-table table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 67px;
+}
+
+.price-table table th, .price-table table td {
+  padding: 12px;
+  border: 1px solid;
+  word-break: normal;
+}
+
+.price-table table thead th {
+  background: #8E7FB9;
+  padding: 12px;
+  border: 1px solid;
+  word-break: normal;
+  font-size: 18px;
+  line-height: 22px;
+  border: 1px solid #000000;
+  color: #F1F0ED;
+  font-family: 'TT Interphases Pro Mono Regular';
+}
+
+.price-table table tbody:nth-child(2) tr td {
+  font-family: 'TT Interphases Pro Mono Bold';
+}
+
+.price-table table tbody tr td {
+  font-size: 18px;
+  line-height: 22px;
+  font-family: 'TT Interphases Pro Mono Regular';
+  text-align: center;
+}
+
+.price-table table tbody tr td:nth-child(1) {
+  width: 320px;
+  font-family: 'TT Interphases Pro Mono Bold';
+}
+
+.price-table table tbody tr td:nth-child(3) {
+  width: 265px;
+}
+
+.price-contact__title {
+  margin-bottom: 30px;
+  font-size: 28px;
+  line-height: 35px;
+}
+
+.price-contact-social__item:not(:last-child) {
+  margin-right: 45px;
+}
+
+.price-contact-social__item p {
+  margin-right: 40px;
+}
+
+.service-separate-wrapper {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.service-separate__title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.service-separate-image {
+  margin-left: auto;
+}
+
+.service-separate-image__item {
+  width: 63px;
+  height: 121px;
+  margin-right: 11px;
+}
+
+.service-separate-left {
+  width: 957px;
+}
+
+.service-separate-right {
+  width: 127px;
+  height: 546px;
+}
+
+.service-separate-info {
+  width: 530px;
+}
+
+.service-separate__more {
+  margin-top: 10px;
+  text-decoration: underline;
+  font-family: 'TT Interphases Pro Mono Italic';
+  display: inline-block;
+}
+
+.service-separate .price-table {
+  width: 860px;
+  margin: 61px 0 39px 0;
+}
+
+.service-separate .price-table__title {
+  font-size: 28px;
+  line-height: 35px;
+  margin-bottom: 30px;
+}
+
+.service-separate__bottom {
+  font-size: 28px;
+  line-height: 35px;
+  margin-bottom: 30px;
+}
+
+.blog-single h2 {
+  text-align: center;
+  margin-bottom: 73px;
+}
+
+.blog-single-content {
+  width: 860px;
+  margin: 0 auto;
+}
+
+.blog-single-content::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.blog-single-content img {
+  float: right;
+}
+
+.blog-single-service {
+  margin: 40px 0 50px 0;
+  padding: 40px 0 35px 0;
+}
+
+.blog-single-service-block {
+  gap: 88px;
+}
+
+.blog-single-service__item {
+  height: 251px;
+}
+
+.blog-single-service__item.window {
+  width: 131px;
+}
+
+.blog-single-service__item.door {
+  width: 59px;
+}
+
+.blog-single-service__link {
+  font-size: 28px;
+  line-height: 35px;
+  text-decoration: underline;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+}
+
+.blog-single .project {
+  margin: 40px 0;
+}
+
+.blog-single .project__title {
+  text-decoration: underline;
+  text-transform: uppercase;
+  width: 860px;
+  margin: 0 auto;
+  text-align: left;
+  margin-bottom: 45px;
+}
+
+.blog-single-price {
+  margin-top: 70px;
+}
+
+.blog-single-price .price__title {
+  text-align: left;
+  text-decoration: underline;
+}
+
+.blog-single-price .price-wrapper {
+  padding-bottom: 0;
+}
+
+.purple {
+  background: #8E7FB9;
+}
+
+.orange {
+  background: #D48F52;
+}
+
+.hidden {
+  overflow: hidden;
+}
+/*# sourceMappingURL=main.css.map */

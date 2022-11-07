@@ -1,0 +1,878 @@
+// import
+@import 'normalize.scss';
+@import '../vendor/_config.scss';
+@import '../vendor/_vars.scss';
+
+body {
+    background: #F1F0ED;
+}
+a, span, p, input, button, select, option,textarea, label {
+    font-family: 'TT Interphases Pro Mono Regular';
+    font-size: 16px;
+    line-height: 20px;
+    color: #252525;
+}
+h1 {
+    font-weight: normal;
+}
+a {
+    text-decoration: none;
+}
+input::placeholder, textarea::placeholder {
+
+    font-size: 16px;
+    line-height: 130%;
+    color: rgba(#262626, .4);
+}
+
+label.error {
+
+    color: #C62828;
+}
+input.error {
+    border: 1px solid #C62828 !important;
+}
+// config
+
+.breadcrumb {
+    &-wrapper {
+        padding-bottom: 70px;
+    }
+    &-main, &-slash {
+        color: #9CACC2;
+        font-size: 14px;
+        transition: $anim-default;
+        &:hover {
+            color: #056BF1
+        }
+    }
+    &-next {
+        font-size: 14px;
+        color: #056BF1;
+        position: relative;
+        padding-left: 15px;
+        transition: $anim-default;
+        &::before {
+            width: 5px;
+            height: 1px;
+            content: '';
+            position: absolute;
+            left: 2px;
+            background: #9CACC2;
+            top: 8px;
+        }
+    }
+}
+
+.container {
+    width: 1340px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.header {
+    &-wrapper {
+        padding: 43px 0 36px 0;
+    }
+    nav {
+        ul {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            li {
+                position: relative;
+                ul {
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    width: 270px;
+                    align-items: flex-start;
+                    padding: 24.5px 0 11.5px 0;
+                    opacity: 0;
+                    pointer-events: none;
+                    transition: $anim-default;
+                    a {
+                        text-decoration: none;
+                    }
+                    li {
+                        &:not(:last-child) {
+                            a {
+                                padding: 3.5px 0; 
+                            }
+                        }
+                    }
+                }
+                a {
+                    text-decoration: underline;
+                    display: inline-block;
+                    text-transform: lowercase;
+                    font-size: 18px;
+                    &:hover {
+                        font-family: 'TT Interphases Pro Mono Italic';
+                    }
+                    &.active {
+                        font-family: 'TT Interphases Pro Mono Bold';
+                    }
+                }
+                &:hover {
+                    ul {
+                        opacity: 1;
+                        pointer-events: all;
+                    }
+                }
+            }
+        }
+    }
+    &-info {
+        margin-top: 28px;
+        align-items: flex-end;
+    }
+    &-logo {
+        width: 216px;
+        display: inline-block;
+        height: 140px;
+        h1 {
+            text-transform: uppercase;
+            font-size: 60px;
+            line-height: 70px;
+        }
+    }
+    &-contact {
+        text-align: right;
+    }
+}
+.slogan {
+    background: #688054;
+    &-wrapper {
+        padding: 26px 0;
+        p {
+            font-size: 28px;
+            line-height: 35px;
+            text-transform: uppercase;
+            color: #F1F0ED;
+            text-align: center;
+        }
+    }
+}
+.service {
+    &-wrapper {
+        padding: 50px 0 63px 0;
+    }
+    &__title {
+        color: #fff;
+        margin-bottom: 30px;
+    }
+    &-item {
+        &__image {
+            width: 169px;
+            height: 345px;
+        }
+        &__name {
+            margin-top: 30px;
+            width: 154px;
+            text-align: center;
+            text-decoration: underline;
+        }
+        &__link {
+            text-decoration: underline;
+        }
+        &:hover {
+            .service-item__name {
+                font-family: 'TT Interphases Pro Mono Italic';
+            }
+        }
+    }
+    &.purple {
+        .service-item__name {
+            color: #fff;
+        }
+    }
+}
+.why {
+    position: relative;
+    &__title {
+        margin-bottom: 50px;
+    }
+    &-info {
+        width: 580px;
+        padding: 50px 0 78px 0;
+    }
+    &-image {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50%;
+        height: 100%;
+    }
+}
+.project {
+    background: #8E7FB9;
+    &-wrapper {
+        padding: 57px 0;
+    }
+    &__title {
+        margin-bottom: 57px;
+        color: #fff;
+    }
+    &-list {
+        cursor: move; /* fallback if grab cursor is unsupported */
+        cursor: grab;
+        cursor: -moz-grab;
+        cursor: -webkit-grab;
+    }
+    &-item {
+        width: 478px;
+        &__image {
+            height: 406px;
+            overflow: hidden;
+            img {
+                transition: $anim-default;
+            }
+        }
+        &__name {
+            color: #F1F0ED;
+            text-align: center;
+            margin-top: 23px;
+            text-decoration: underline;   
+        }
+        &__link {
+            text-decoration: none;
+        }
+        &:hover {
+            .project-item__image {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+            .project-item__name {
+                font-family: 'TT Interphases Pro Mono Italic';
+            }
+        }
+    }
+    &-slider {
+        position: relative;
+        &-panel {
+            position: absolute;
+            top: calc(50% - 50px);
+            left: 0;
+            z-index: 1;
+            transform: translateY(-50%);
+            width: 100%;
+            &__arrow {
+                font-size: 75px;
+                line-height: 94px;
+                text-transform: uppercase;
+                color: #F2F0EA;
+                position: absolute;
+                transition: $anim-default;
+                &.next {
+                    right: 0;
+                }
+                &.prev {
+                    left: 0;
+                }
+                &.swiper-button-disabled {
+                    opacity: 0;
+                    pointer-events: none;       
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    &-wrapper {
+        padding: 34px 0 40px 0;
+    }
+    nav {
+        height: 143px;
+        margin-right: auto;
+        margin-left: 54px;
+       & > ul {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+           /* align-items: center;
+            justify-content: space-between;*/
+            flex-wrap: wrap;
+            & > li {
+                width: 130px;
+            }
+            li {
+                position: relative;
+                margin-bottom: 9px;
+              //  width: 130px;
+               // margin-right: 90px;
+                &:nth-child(5) {
+                    margin-bottom: 0;
+                    margin-right: 95px;
+                }
+                ul {
+                    left: 100px;
+                    top: 0;
+                    position: absolute;
+                    display: flex;  
+                    flex-direction: column;
+                    width: 100%;
+                }
+                li {
+                    width: 273px;
+                }
+                a {
+                    display: inline-block;
+                    text-transform: lowercase;
+                    font-size: 18px;
+                    &:hover {
+                        font-family: 'TT Interphases Pro Mono Italic';
+                    }
+                    &.active {
+                        font-family: 'TT Interphases Pro Mono Bold';
+                    }
+                }
+                &:hover {
+                    ul {
+                        opacity: 1;
+                        pointer-events: all;
+                    }
+                }
+            }
+        }
+    }
+    &-logo {
+        width: 216px;
+        display: inline-block;
+        height: 140px;
+        p {
+            text-transform: uppercase;
+            font-size: 60px;
+            line-height: 70px;
+        }
+    }
+    &-main {
+        width: 274px;
+    }
+    &__copy {
+        margin-top: auto;
+        font-size: 12px;
+    }
+    &__phone {
+        font-size: 28px;
+        line-height: 35px;
+    }
+    &-contact {
+        align-items: flex-end;
+        width: 250px;
+    }
+    &-social {
+        margin: 7px 0 12px 0;
+        &__link {
+            &:not(:last-child) {
+                margin-right: 45px;
+            }
+        }
+    }
+    &-info {
+        &__item {
+            text-align: right;
+            display: block;
+        }
+    }
+}
+.service-single {
+    &-block {
+        padding: 49px 0 41px 0;
+        &:nth-child(odd) {
+            .service-single-info__title {
+                text-transform: uppercase;
+            }
+            .service-single-info__title,
+            .service-single-info__descr,
+            .service-single-info__link{
+                color: #fff;
+            }
+        }
+    }
+    &-image {
+        width: 482px;
+        margin-left: 116px;
+        align-items: flex-end;
+        justify-content: space-between;
+        &__item {
+            align-items: flex-end;
+            &:nth-child(1) {
+                width: 79px;
+                height: 345px;
+            }
+            &:nth-child(2) {
+                width: 95px;
+                height: 180px;
+            }
+            &:nth-child(3) {
+                width: 45px;
+                height: 193px;
+            }
+            &:nth-child(4) {
+                width: 92px;
+                height: 177px;
+            }
+        }
+    }
+    &-info {
+        width: 530px;
+        margin-right: 110px;
+        &__title {
+            margin-bottom: 80px;
+        }
+        &__link {
+            margin-top: 65px;
+            display: inline-block;
+            text-decoration: underline;
+            font-family: 'TT Interphases Pro Mono Italic';
+        }
+    }
+}
+
+.about {
+    background: #688054;
+    position: relative;
+    &__title {
+        margin-bottom: 50px;
+    }
+    &__title, &__descr {
+        color: #fff;
+    }
+    &-info {
+        padding: 48px 0;
+        width: 420px;
+    }
+    &-image {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 55%;
+        height: 100%;
+    }
+}
+
+.advantage {
+    &-wrapper {
+        padding: 30px 0 50px 0;
+    }
+    &__title {
+        margin-bottom: 30px;
+    }
+    &-list {
+        height: 180px;
+        flex-wrap: wrap;
+        width: fit-content;
+    }
+    &-item {
+        width: 420px;
+        margin-right: 21px;
+        margin-bottom: 24px;
+    }
+    &-image {
+        height: 458px;
+        width: 100%;
+    }
+}
+.contact {
+    //padding: 30px 0 59px;
+    &-wrapper {
+        padding: 121px 0 218px 0;
+    }
+    &__title {
+        margin-bottom: 30px;
+    }
+    &-block {
+        &__name {
+            font-size: 45px;
+            line-height: 56px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+        &-inner {
+            &:nth-child(1) {
+                width: 310px;
+              /*  margin-right: 20px;*/
+            }
+            &:nth-child(2) {
+                width: 310px;
+               /* margin-right: 20px;*/
+               margin-left: auto;
+               margin-right: 16px;
+            }
+            &:nth-child(3) {
+               /* margin-left: auto;*/
+                margin-right: 130px;
+            }
+        }
+    }
+    &-social {
+        &__item {
+            &:not(:last-child) {
+                margin-right: 45px;
+            }
+            p {
+                margin-right: 40px;
+            }
+        }
+    }
+    &-single {
+        .contact-wrapper {
+            padding: 30px 0 59px 0;
+        }
+        .contact-block-inner:nth-child(2) {
+            margin-left: 0;
+            margin-right: auto;
+        }
+    }
+}
+
+.our-project {
+    &-wrapper {
+        padding: 20px 0;
+    }
+    &-list {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    &-item {
+        width: 420px;
+        height: 350px;
+        position: relative;
+        &-link {
+            width: 100%;
+            height: 100%;
+            &::before {
+                position: absolute;
+                content: '';
+                opacity: 0;
+                transition: $anim-default;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(104, 128, 84, 0.8);
+            }
+            &:hover {
+                &::before {
+                    opacity: 1;
+                }
+                .our-project-item__name {
+                    opacity: 1;
+                }
+            }
+        }
+        &__name {
+            font-family: 'TT Interphases Pro Mono Regular';
+            font-weight: normal;
+            font-size: 28px;
+            line-height: 35px;
+            text-transform: uppercase;
+            color: #F1F0ED;
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            opacity: 0;
+            transition: $anim-default;
+            width: calc(100% - 40px);
+        }
+    }
+    &-current {
+        margin-bottom: 50px;
+        &-image {
+            width: 639px;
+            height: 362px;
+        }
+        &__title {
+            margin-bottom: 50px;
+        }
+        &-info {
+            width: 642px;
+        }
+        &-block {
+            margin-top: auto;
+        }
+        &__link {
+            font-size: 18px;
+            margin-top: 56px;
+            line-height: 22px;
+            font-family: 'TT Interphases Pro Mono Italic';
+            text-decoration: underline;
+        }
+    }
+}
+
+.blog {
+    &-list {
+        width: 860px;
+        margin: 0 auto;
+        margin-bottom: 60px;
+    }
+    &-item {
+        &:not(:last-child) {
+            margin-bottom: 50px;
+        }
+        .our-project-current {
+            margin-bottom: 0;
+            &-image {
+                width: 420px;
+                height: 300px;
+                overflow: hidden;
+                img {
+                    transition: $anim-default;
+                }
+            }
+            &-info {
+                width: 420px;
+            }
+        }
+        &:hover {
+            .our-project-current-image {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+.recall {
+    &-wrapper {
+        padding: 20px 0 55px 0;
+        width: 860px;
+        margin: 0 auto;
+    }
+    &-block {
+        margin-bottom: 60px;
+    }
+    &-info {
+        width: 420px;
+        &__name {
+            font-size: 28px;
+            line-height: 35px;
+            text-transform: uppercase;
+        }
+        &__org {
+            font-family: 'TT Interphases Pro Mono Italic';
+            margin: 5px 0 3px 0;
+        }
+        &__date {
+            font-family: 'TT Interphases Pro Mono Italic';
+            margin-bottom: 20px;
+        }
+        &__text {
+            margin-top: auto;
+        }
+    }
+    &-image {
+        width: 420px;
+        height: 300px;
+    }
+}
+
+.price {
+    &__title {
+        text-align: center;
+        margin-bottom: 52px;
+    }
+    &-wrapper {
+        width: 860px;
+        margin: 0 auto;
+        padding: 20px 0 60px 0;
+    }
+    &-table {
+        figure {
+            margin: 0;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 67px;
+            th,td {
+                padding: 12px;
+                border: 1px solid;
+                word-break: normal;
+            }
+            thead {
+                th {
+                    background: #8E7FB9;
+                    padding: 12px;
+                    border: 1px solid;
+                    word-break: normal;
+                    font-size: 18px;
+                    line-height: 22px;
+                    border: 1px solid #000000;
+                    color: #F1F0ED;
+                    font-family: 'TT Interphases Pro Mono Regular';
+                }
+            }
+            tbody {
+                &:nth-child(2) {
+                    tr {
+                        td {
+                            font-family: 'TT Interphases Pro Mono Bold';
+                        }
+                    }
+                }
+                tr {
+                    td {
+                        font-size: 18px;
+                        line-height: 22px;
+                        font-family: 'TT Interphases Pro Mono Regular';
+                        text-align: center;
+                        &:nth-child(1) {
+                            width: 320px;
+                            font-family: 'TT Interphases Pro Mono Bold';
+                        }
+                        &:nth-child(3) {
+                            width: 265px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-contact {
+        &__title {
+            margin-bottom: 30px;
+            font-size: 28px;
+            line-height: 35px;
+        }
+        &-social {
+            &__item {
+                &:not(:last-child) {
+                    margin-right: 45px;
+                }
+                p {
+                    margin-right: 40px;
+                }
+            }
+        }
+    }
+}
+
+.service-separate {
+    &-wrapper {
+        width: 1100px;
+        margin: 0 auto;
+    }
+    &__title {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    &-image {
+        margin-left: auto;
+        &__item {
+            width: 63px;
+            height: 121px;
+            margin-right: 11px;
+        }
+    }
+    &-left {
+        width: 957px;
+    }
+    &-right {
+        width: 127px;
+        height: 546px;
+    }
+    &-info {
+        width: 530px;
+    }
+    &__more {
+        margin-top: 10px;
+        text-decoration: underline;
+        font-family: 'TT Interphases Pro Mono Italic';
+        display: inline-block;
+    }
+    .price-table {
+        width: 860px;
+        margin: 61px 0 39px 0;
+        &__title {
+            font-size: 28px;
+            line-height: 35px;
+            margin-bottom: 30px;
+        }
+    }
+    &__bottom {
+        font-size: 28px;
+        line-height: 35px;
+        margin-bottom: 30px;
+    }
+}
+
+.blog-single {
+    h2 {
+        text-align: center;
+        margin-bottom: 73px;
+    }
+    &-content {
+        width: 860px;
+        margin: 0 auto;
+        &::after {
+            content:"";
+            display:block;
+            clear:both;
+        }
+        img {
+            float: right;
+        }
+    }
+    &-service {
+        margin: 40px 0 50px 0;
+        padding: 40px 0 35px 0;
+        &-block {
+            gap: 88px;
+        }
+        &__item {
+            height: 251px;
+            &.window {
+                width: 131px;
+            }
+            &.door {
+                width: 59px;
+            }
+        }
+        &__link {
+            font-size: 28px;
+            line-height: 35px;
+            text-decoration: underline;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+    }
+    .project {
+        margin: 40px 0;
+        &__title {
+            text-decoration: underline;
+            text-transform: uppercase;
+            width: 860px;
+            margin: 0 auto;
+            text-align: left;
+            margin-bottom: 45px;
+        }
+    }
+    &-price {
+        margin-top: 70px;
+        .price__title {
+            text-align: left;
+            text-decoration: underline;
+        }
+        .price-wrapper {
+            padding-bottom: 0;
+        }
+    }
+}
+
+.purple {
+    background: #8E7FB9;
+}
+.orange {
+    background: #D48F52;
+}
+
+.hidden {
+    overflow: hidden;
+}

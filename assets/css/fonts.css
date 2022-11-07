@@ -1,0 +1,32 @@
+@font-face {
+  font-family: 'TT Interphases Pro Mono Bold';
+  src: url("../fonts/TT-Interphases-Pro-Mono-Bold.eot");
+  src: local("Gilroy Regular"), local("TT-Interphases-Pro-Mono-Bold"), url("../fonts/Gilroy-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/TT-Interphases-Pro-Mono-Bold.woff") format("woff"), url("../fonts/TT-Interphases-Pro-Mono-Bold.woff2") format("woff2"), url("../fonts/TT-Interphases-Pro-Mono-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Interphases Pro Mono Regular';
+  src: url("../fonts/TT-Interphases-Pro-Mono-Regular.eot");
+  src: local("TT Interphases Pro Mono Regular"), local("TT-Interphases-Pro-Mono-Regular"), url("../fonts/TT-Interphases-Pro-Mono-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/TT-Interphases-Pro-Mono-Regular.woff") format("woff"), url("../fonts/TT-Interphases-Pro-Mono-Regular.woff2") format("woff2"), url("../fonts/TT-Interphases-Pro-Mono-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Interphases Pro Mono Bold Italic';
+  src: url("../fonts/TT-Interphases-Pro-Mono-Bold-Italic.eot");
+  src: local("TT Interphases Pro Mono Bold Italic"), local("TT-Interphases-Pro-Mono-Bold-Italic"), url("../fonts/TT-Interphases-Pro-Mono-Bold-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/TT-Interphases-Pro-Mono-Bold-Italic.woff") format("woff"), url("../fonts/TT-Interphases-Pro-Mono-Bold-Italic.woff2") format("woff2"), url("../fonts/TT-Interphases-Pro-Mono-Bold-Italic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TT Interphases Pro Mono Italic';
+  src: url("../fonts/TT-Interphases-Pro-Mono-Italic.eot");
+  src: local("TT Interphases Pro Mono Italic"), local("TT-Interphases-Pro-Mono-Italic"), url("../fonts/TT-Interphases-Pro-Mono-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/TT-Interphases-Pro-Mono-Italic.woff") format("woff"), url("../fonts/TT-Interphases-Pro-Mono-Italic.woff2") format("woff2"), url("../fonts/TT-Interphases-Pro-Mono-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+/*# sourceMappingURL=fonts.css.map */
