@@ -12,6 +12,9 @@ a, span, p, input, button, select, option,textarea, label {
     line-height: 20px;
     color: #252525;
 }
+b, strong {
+    font-family: 'TT Interphases Pro Mono Bold';
+}
 h1 {
     font-weight: normal;
 }
@@ -73,6 +76,53 @@ input.error {
 .header {
     &-wrapper {
         padding: 43px 0 36px 0;
+    }
+    &-burger {
+        position: relative;
+        width: 30px;
+        height: 24px;
+        z-index: 3;
+        transition: $anim-default;
+        display: none;
+       // order: 1;
+        span {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            background: #000;
+            height: 3px;
+            transition: $anim-default;
+            &:nth-child(1) {
+                top: 0;
+                transition: $anim-default;
+            }
+            &:nth-child(2) {
+                top: 50%;
+                transform: translateY(-50%);
+                opacity: 1;
+                transition: $anim-default;
+            }
+            &:nth-child(3) {
+                bottom: 0;
+                transition: $anim-default;
+            }
+        }
+        &.open {
+            span {
+                transition: all ease-in .2s;
+                &:nth-child(1) {
+                    top: 50%;
+                    transform: translateY(-50%) rotate(45deg);
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                &:nth-child(3) {
+                    top: 50%;
+                    transform: translateY(-50%) rotate(-45deg);
+                }
+            }
+        }
     }
     nav {
         ul {
@@ -534,13 +584,18 @@ input.error {
         padding: 20px 0;
     }
     &-list {
-        gap: 20px;
         flex-wrap: wrap;
     }
     &-item {
         width: 420px;
         height: 350px;
         position: relative;
+        &:not(:nth-child(3n + 3)) {
+            margin-right: 20px;
+        }
+        &:not(:nth-last-child(-n + 3)) {
+            margin-bottom: 20px;
+        }
         &-link {
             width: 100%;
             height: 100%;
@@ -803,20 +858,28 @@ input.error {
 }
 
 .blog-single {
-    h2 {
-        text-align: center;
-        margin-bottom: 73px;
+    h2, h3 , h4 {
+        margin-bottom: 50px;
+        font-size: 45px;
+        line-height: 56px;
+        text-transform: uppercase;
+        font-family: 'TT Interphases Pro Mono Regular';
+        font-weight: normal;
     }
     &-content {
         width: 860px;
         margin: 0 auto;
-        &::after {
-            content:"";
-            display:block;
-            clear:both;
-        }
-        img {
-            float: right;
+        &.image {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .blog-single-info {
+                width: 530px;
+            }
+            .blog-single-image {
+                margin: 0;
+                width: 308px;
+            }
         }
     }
     &-service {

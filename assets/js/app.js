@@ -7,25 +7,17 @@ const swiperProject = new Swiper(".project-slider", {
         prevEl: ".project-slider-panel__arrow.prev",
         nextEl: ".project-slider-panel__arrow.next",
     },
-   /*breakpoints: {
-        // when window width is >= 320px
-        1240: {
-            spaceBetween: 60,
-           // freeMode: false,
-        },
-        992: {
-            spaceBetween: 30,
-            slidesPerView: 3,
+   breakpoints: {
+        768: {
+            spaceBetween: 50,
         },
         576: {
             spaceBetween: 30,
-            slidesPerView: 2,
         },
         320: {
-            spaceBetween: 30,
-            slidesPerView: 1,
+            spaceBetween: 20,
         }
-    }*/
+    }
 });
 
 // jQuery function
@@ -34,9 +26,8 @@ $(document).ready(function() {
     function headerBurger (){
         $('.header-burger').click(function () {
             $('.header-burger').toggleClass('open');
-            $('.header').toggleClass('active');
-            $('.header-info').toggleClass('active');
-            
+            $('.header').toggleClass('active');        
+            $('.header').find('nav').toggleClass('active');         
             if($('.header').hasClass('active')) {
                 $('html').addClass('hidden');
             } else {
@@ -44,31 +35,5 @@ $(document).ready(function() {
             }
         });
     };
-    headerBurger();
-    // Валидация сайта
-    function formValidate() {
-        $('#popup-consult').validate({
-            rules: {
-                name: {
-                    required: true,
-                    minlength: 2
-                },
-                phone: {
-                    required: true,
-                    minlength: 5
-                },
-            },
-            messages: {
-                name: {
-                    required: "Заполните поле",
-                    minlength: "Должно быть не менее: 2 символов"
-                },
-                phone: {
-                    required: "Заполните поле",
-                    minlength: "Должно быть не менее: 5 символов"
-                },
-            }
-        });
-    };
-    formValidate();   
+    headerBurger(); 
 });
